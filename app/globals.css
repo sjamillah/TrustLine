@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 248, 237, 235; /* Default background color */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 51, 51, 51; /* Dark background color */
+  }
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 51, 51, 51; /* Dark mode */
+}
+
+.light {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 248, 237, 235; /* Light mode */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
